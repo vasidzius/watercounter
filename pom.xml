@@ -51,7 +51,7 @@
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.vasidzius.watercounter.WaterCounter</mainClass>
+                                    <mainClass>com.vasidzius.watercounter.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

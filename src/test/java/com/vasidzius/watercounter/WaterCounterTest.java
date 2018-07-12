@@ -41,32 +41,8 @@ public class WaterCounterTest {
                 new Object[]{new int[]{1, 2, 3, 4, 4, 5, 6, 7}, 0},
                 new Object[]{new int[]{1, 2, 3, 4, 3, 4, 5, 6, 7}, 1},
                 new Object[]{new int[]{1, 2, 3, 4, 4, 5, 6, 7, 0}, 0},
-                new Object[]{new int[]{1, 2, 3, 4, 4, 5, 6, 7, 0, 7}, 7},
-                new Object[]{new int[]{5, 3, 3, 7, 7, 6, 6, 7, 7, 3, 3, 5}, 10},
                 new Object[]{new int[]{5, 0, 1, 0, 4, 3, 6, 4, 10, 5, 4, 3}, 19},
         };
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void lengthValidation(){
-        waterCounter.calculateWaterAmount(new int[32001]);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void negativeValueValidation(){
-        int[] landscape = new int[32001];
-        landscape[0] = -1;
-        waterCounter.calculateWaterAmount(landscape);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void rangeValueValidation(){
-        int[] landscape = new int[32001];
-        landscape[0] = 32001;
-        waterCounter.calculateWaterAmount(landscape);
-    }
-
-
-
 
 }
