@@ -16,7 +16,7 @@ public class WaterCounterTest {
     @Parameters
     public void count(int[] landscape, long expectedAmount) {
         //when
-        long amount = waterCounter.calculateWaterAmount(landscape);
+        int amount = waterCounter.calculateWaterAmount(landscape);
 
         //then
         assertEquals(expectedAmount, amount);
@@ -44,5 +44,4 @@ public class WaterCounterTest {
                 new Object[]{new int[]{5, 0, 1, 0, 4, 3, 6, 4, 10, 5, 4, 3}, 19},
         };
     }
-
 }
